@@ -740,6 +740,192 @@ section h2 {
     }
 }
 
+/* Methodology Page Styles */
+.methodology-page {
+    padding-top: 120px;
+    background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+}
+
+.methodology-page h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: var(--dark);
+}
+
+.methodology-content {
+    display: grid;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.methodology-card {
+    background: linear-gradient(to bottom right, var(--light), #f8fafc);
+    padding: 3.5rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+}
+
+.methodology-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--gray) 0%, rgba(247, 250, 252, 0.2) 100%);
+    border-radius: 50%;
+    transform: translate(30%, -30%);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.methodology-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(225deg, var(--gray) 0%, rgba(247, 250, 252, 0.2) 100%);
+    border-radius: 50%;
+    transform: translate(-30%, 30%);
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.methodology-card .icon-circle,
+.methodology-card .icon-triangle,
+.methodology-card .icon-square,
+.methodology-card .icon-pentagon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2.5rem;
+    border-radius: 20px;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.methodology-card .icon-circle { background: linear-gradient(135deg, var(--blue) 0%, #1472b0 100%), linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%); }
+.methodology-card .icon-triangle { background: linear-gradient(135deg, var(--yellow) 0%, #fca903 100%), linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%); }
+.methodology-card .icon-square { background: linear-gradient(135deg, var(--red) 0%, #c41920 100%), linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%); }
+.methodology-card .icon-pentagon { background: linear-gradient(135deg, var(--green) 0%, #7aa534 100%), linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%); }
+
+.methodology-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    border-color: rgba(0,0,0,0.08);
+    background: linear-gradient(to bottom right, var(--light), #f1f5f9);
+}
+
+.methodology-card:hover .icon-circle,
+.methodology-card:hover .icon-triangle,
+.methodology-card:hover .icon-square,
+.methodology-card:hover .icon-pentagon {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.methodology-card h2 {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.methodology-card p {
+    position: relative;
+    z-index: 1;
+    color: #4a5568;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.methodology-content p:last-child {
+    margin-bottom: 0;
+}
+
+.references {
+    background: linear-gradient(135deg, var(--gray) 0%, #edf2f7 100%);
+    padding: 3.5rem;
+    border-radius: 24px;
+    margin-top: 3rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.references h2 {
+    color: var(--dark);
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.references ul {
+    list-style: none;
+}
+
+.references li {
+    color: #4a5568;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.references li::before {
+    content: '•';
+    color: var(--blue);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .methodology-page {
+        padding-top: 100px;
+    }
+
+    .methodology-page h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .methodology-content {
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .methodology-content article {
+        padding: 2rem;
+    }
+
+    .methodology-content h2 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .references {
+        padding: 2rem;
+    }
+
+    .references h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .mobile-menu-button {
